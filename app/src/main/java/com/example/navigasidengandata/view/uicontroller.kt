@@ -46,6 +46,3 @@ fun SiswaApp(
 
                     modifier = Modifier.padding(isiRuang)
                 )
-        }
-        }
-}
