@@ -28,7 +28,7 @@ fun SiswaApp(
     viewModel: SiswaViewModel = viewModel(),
     navController : NavHostController = rememberNavController()
 ) {
-    Scaffold { isiRuang->
+    Scaffold { isiRuang ->
         //edit 2 : tambahkan variabel uiState
         val uiState = viewModel.statusUI.collectAsState()
         NavHost(
@@ -36,8 +36,8 @@ fun SiswaApp(
             startDestination = Navigasi.Formulir.name,
 
             modifier = Modifier.padding(isiRuang)
-        ){
-            Scaffold { isiRuang->
+        ) {
+            Scaffold { isiRuang ->
                 //edit 2 : tambahkan variabel uiState
                 val uiState = viewModel.statusUI.collectAsState()
                 NavHost(
@@ -46,3 +46,13 @@ fun SiswaApp(
 
                     modifier = Modifier.padding(isiRuang)
                 )
+            }
+        }
+    }
+}
+
+private fun cancelAndBackToFormulir(
+    navController: NavHostController
+){
+    navController.popBackStack(Navigasi.Formulir.name, inclusive = false)
+}
