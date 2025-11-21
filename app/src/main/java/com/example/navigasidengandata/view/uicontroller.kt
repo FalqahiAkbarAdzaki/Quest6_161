@@ -20,5 +20,11 @@ import androidx.navigation.compose.composable
 import com.example.myarsitekturmvvm.view.TampilSiswa
 import com.example.myarsitekturmvvm.viewmodel.SiswaViewModel
 
-import com.example.myarsitekturmvvm.view.TampilSiswa
-import com.example.myarsitekturmvvm.viewmodel.SiswaViewModel
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun SiswaApp(
+    //edit 1 : parameter viewModel
+    modifier: Modifier,
+    viewModel: SiswaViewModel = viewModel(),
+    navController : NavHostController = rememberNavController()
+) {
