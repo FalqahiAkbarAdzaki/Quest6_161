@@ -1,6 +1,7 @@
 package com.example.navigasidengandata.view
 
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.selection.selectable
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -98,6 +99,23 @@ fun FormIsian(
                 label = { Text(text = "Alamat") },
                 onValueChange = {}
             )
+            Row{
+                pilihan.JK.forEach { item ->
+                    Row(modifier = Modifier.selectable(
+                        selected = txtGender == item,
+                        onClick = item
+                }
+                ),
+                verticalAlignment = Alignment.CenterVertically) {
+                RadioButton(
+                    selected = txtGender == item,
+                    onClick = {
+                        txtGender = item
+                    }
+                )
+                Text(item)
+            }
+            }
 
             Spacer(modifier = Modifier.height(30.dp))
 
