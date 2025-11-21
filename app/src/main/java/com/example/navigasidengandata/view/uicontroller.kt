@@ -17,3 +17,5 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import com.example.myarsitekturmvvm.view.TampilSiswa
+import com.example.myarsitekturmvvm.viewmodel.SiswaViewModel
